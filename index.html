@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    <style>
+        #input{
+            margin-left: 400px;
+        }
+        #button{
+            margin-right: 400px;
+        }
+        #output {
+            margin-left: 300px;
+        }
+      
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">simple Calculater</h1>
+    <input type="text" id="input" placeholder="enter some number">
+    <button id="button" onclick="getresult()" >result</button>
+    <h1 id="output">Result:</h1>
+
+    <script>
+        let input = document.getElementById("input");
+        let button = document.getElementById("button");
+        button.addEventListener("click",function(){
+            let result = eval(input.value);
+            console.log(result);
+            document.getElementById("output").innerHTML = `your result is ${result}`;
+        });
+
+    </script>
+        
+</body>
+</html>
